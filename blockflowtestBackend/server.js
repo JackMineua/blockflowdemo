@@ -11,7 +11,7 @@ app.use(express.json());
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
-app.use(cors());
+app.use(cors({ origin: "https://blockflowdemo.vercel.app" }));
 
 const clients = new Map();
 
